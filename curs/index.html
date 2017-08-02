@@ -56,6 +56,7 @@
 
         showMessage(firstName + ' ' + lastName);
 
+		//functiile in javascript iau doar parametrii pe care i-am declarat
         showMessage(firstName, lastName, 'abc', 123);
 
 
@@ -96,7 +97,7 @@
 
 
 
-        //nr caractere
+        //.length returneaza nr caractere din string
 
         showMessage('john doe'.length);
 
@@ -108,7 +109,7 @@
 
         showMessage('John Doe'.replace('John', 'Jane'));
 
-        showMessage(message.replace('sunt angajat', 'lucrez'));
+        showMessage(message.replace('sunt angajat', 'sunt angajata'));
 
         showMessage(message.replace(duration, duration * 2));
 
@@ -120,7 +121,7 @@
 
         showMessage('John Snow'.substr(0, 3));
 
-        //extrage un string intre 2 indexuri pana la ultima pozitie 
+        //extrage un string intre 2 indexuri 
 
         showMessage('John Snow'.substring(1, 3));
 
@@ -128,6 +129,7 @@
 
         showMessage(message.substr(10, 5));
 
+		//iti face textul cu litere mari
         showMessage(firm.toUpperCase());
 
 
@@ -151,10 +153,10 @@
         //scoatem primul cuvant din fraza si al al doilea
 
         var posFirstSpace = phrase.indexOf(' ');
-
-        var posSecondSpace = phrase.indexOf(' ', posFirstSpace + 1);
-
-        showMessage(phrase.substring(0, posFirstSpace));
+		
+		showMessage(phrase.substring(0, posFirstSpace));
+		
+        var posSecondSpace = phrase.indexOf(' ', posFirstSpace + 1); 
 
         showMessage(phrase.substring(posFirstSpace + 1, posSecondSpace));
 
