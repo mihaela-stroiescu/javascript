@@ -6,58 +6,22 @@
 </head>
 <body>
 	<script type="text/javascript">
-				
+
 			var firstNr = 27;
 			var secondNr = 12;
 			console.log('Primul numar este ' + firstNr);
-			console.log('Al doilea numar este ' + secondNr);
-			function sum(firstNr, secondNr)
-			{
-				return firstNr + secondNr;
-			}
-			var suma = sum(firstNr, secondNr);
+			console.log('Al doilea numar este ' + secondNr);			
+			var suma = firstNr + secondNr;
 			console.log('Suma = ' + suma);
-			
-			function scadere(firstNr, secondNr)
-			{
-				return firstNr - secondNr;
-			}
-			var dif = scadere(firstNr, secondNr);
+			var dif = firstNr - secondNr;
 			console.log('Diferenta = ' + dif);
-			
-			function factor(firstNr, secondNr)
-			{
-				return firstNr * secondNr;
-			}
-			var prod = factor(firstNr, secondNr);
+			var prod = firstNr * secondNr;
 			console.log('Produsul = ' + prod);
-			
-			var thirdNr = 24;
-			
-			function catul(firstNr, secondNr)
-			{
-				return firstNr / secondNr;
-			}
-			var cat = catul(firstNr, secondNr);
-			var isMajor = cat > 2 ? '2' : '1';
-			
-						
-			function divid(firstNr, thirdNr)
-			{
-				return firstNr - thirdNr;
-			}
-			var divide = divid(firstNr, thirdNr);
-			
-			
-			console.log('Catul = ' + isMajor + ' si Restul = ' + divide);
-			
-			function expo(firstNr, secondNr)
-			{
-				return firstNr ** secondNr;
-			}
-			var exponential = expo(firstNr, secondNr);
-			console.log('Rezulta = ' + exponential);
-			
+			var divide = Math.floor(firstNr / secondNr);
+			var rest = firstNr % secondNr;
+			console.log('Catul = ' + divide + ' Restul = ' + rest);						
+			var exponential = firstNr ** secondNr;
+			console.log('Rezulta = ' + exponential);						
 			
 	</script>
 	

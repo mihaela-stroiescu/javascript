@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf-8">
+	<title>My website</title>
+</head>
+<body>
+	<body>  
+
+    <div id="container"> 
+          
+    </div>
+
+    <script type="text/javascript">
+	
+	
+
+        function showMessage(message){
+
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }	
+			var fraza = 'Easy access to the Lorem Ipsum dummy text';
+			
+			showMessage(fraza);
+			showMessage(fraza.length);
+			showMessage(fraza.replace(/ /g,'').length);
+			showMessage(fraza.substr(0, 4).toUpperCase(fraza));
+			showMessage(fraza.substr(0, 4).replace(fraza.substr(0, 4),'Word'));
+			
+			var lungFraza = fraza.length;
+			var lastSpace = fraza.lastIndexOf(' ') + 1;			
+			showMessage('=' + fraza.substring(lastSpace, lungFraza));
+			
+			var firstSpace = fraza.indexOf(' ');
+			var secondSpace = fraza.indexOf(' ', firstSpace + 1);
+			showMessage(fraza.replace(fraza.substring(firstSpace, secondSpace), ''));
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	</script>
+	
+</body>
+</html>
+
