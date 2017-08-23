@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf-8">
+	<title>My website</title>
+</head>
+<body>
+	<body>  
+
+    <div id="container"> 
+          
+    </div>
+
+    <script type="text/javascript">
+	
+	
+
+        function showMessage(message){
+
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }	
+			var fraza = 'Era iarna     ';
+			
+			showMessage(fraza);
+			showMessage(fraza.length);
+						
+			var count = fraza.length;
+			var countVocale = 0;
+			var countConsoane = 0;
+			for (var i = 0; i < count; i++) {
+				if (fraza[i] == 'a' || fraza[i] == 'e' || fraza[i] == 'i' || fraza[i] == 'o' || fraza[i] == 'u' || fraza[i] == 'A' || fraza[i] == 'E' || fraza[i] == 'I' || fraza[i] == 'O' || fraza[i] == 'U') {
+					countVocale++;								
+				} else if (fraza[i] != ' ') {
+					countConsoane++;
+				}
+			}
+			showMessage(' Numarul de vocale este : ' + countVocale);
+			showMessage(' Numarul de consoane este : ' + countConsoane);
+			
+			
+			
+			
+	</script>
+	
+</body>
+</html>
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf-8">
+	<title>My website</title>
+</head>
+<body>
+	<body>  
+
+    <div id="container"> 
+          
+    </div>
+
+    <script type="text/javascript">
+	
+	
+
+        function showMessage(message){
+
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }	
+			var fraza = '1001111001';
+			
+			showMessage(fraza);
+			showMessage(fraza.length);
+						
+			var count = fraza.length;
+			var countZero = 0;
+			var countUnu = 0;
+			for (var i = 0; i < count; i++) {
+				if (fraza[i] === '1') {
+					countUnu++;								
+				} else {
+					countZero++;
+				}
+			}
+			showMessage(' Numarul zerourilor este : ' + countZero);
+			showMessage(' Numarul de unu este : ' + countUnu);
+			
+			
+			
+			
+	</script>
+	
+</body>
+</html>
+

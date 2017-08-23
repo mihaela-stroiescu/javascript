@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+</head>
+
+<body>  
+
+    <div id="container"></div>
+
+    <script>
+		// == expresia returneaza true sau false- verifica doar continutul
+		//pt comparatii:!== idntic diferit
+		
+		// && - inseamna si iar || inseamna ori
+		// if(conditie) {
+	//	instruc carese vor executa daca conditia este true
+	//	}
+		
+		//
+		function show(message){
+
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+        }	
+		if (2=='1') {
+			show("1 este egal cu '1'");
+		} else {
+			show('alt mesaj');
+		}
+		
+		var firstNr = 9;
+		var secondNr = 7;
+		if (firstNr > secondNr) {
+			show('Nr mai mare este: ' + firstNr);			
+		}else {
+			show('Nr mai mare este: ' + secondNr);
+		}
+		
+		
+		
+		var firstName = 'Alinuta';
+		var secondName = 'Diana';
+		if (firstName > secondName) {
+			show(firstName + ' ' + secondName);			
+		}else {
+			show(secondName + ' ' + firstName);
+		}
+		
+		
+		
+		var nr = 11;
+		if (nr == 0) {
+			show(0);			
+		} else if (nr % 2 == 0) {			
+			show('este par');
+		} else {
+			show('este impar');
+		}	
+		
+		/* if (cond1) {
+			instruct care se vor executa doar dca val cond 1 este true
+		} else if (cond2) {
+			instruct se va executa doar daca cond 2 este true {
+		} else {
+			instruc va returna rez diferit de cond 2
+		}
+		
+		*/
+		/*for pt operatii care se repeta
+		
+		for (initialization; condition; final exprssion) {
+		
+		}*/
+		
+		var number;
+		for (number = 1; number <= 5; number++) {
+			show(number);
+		}
+		
+		var text = 'Lorem ipsum';
+			//show(text[0]);
+			//show(text[1]);
+		var textLength = text.length;	
+		for (var i = 0; i < textLength; i++) {
+			show('Caracterul de pe pozitia ' +  (i + 1) + ' este: ' + text[i]);
+		}
+		
+		for (var i = 0; i < textLength; i+=2) {
+			show('Caracterul de pe pozitia ' +  (i + 1) + ' este: ' + text[i]);
+		}
+		
+		for (var i = textLength-1; i >= 0; i--) {
+			show('Caracterul de pe pozitia ' +  (i + 1) + ' este: ' + text[i]);
+		}
+		
+		// cum cerem un caracter promterului
+		
+		var number = prompt("Introdu un nr de la 0 la 10");
+			show(number);
+			
+		
+			
+		
+	
+	</script>
+
+</body>
+
+</html>

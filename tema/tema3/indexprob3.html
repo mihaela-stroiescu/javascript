@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf-8">
+	<title>My website</title>
+</head>
+<body>
+	<body>  
+
+    <div id="container"> 
+          
+    </div>
+
+    <script type="text/javascript">
+	
+	
+
+        function showMessage(message){
+
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }	
+			
+			
+			var number;
+		for (number = 1; number <= 100; number++) {
+
+			
+			if (number % 3 == 0 && number % 5 == 0) {
+					showMessage(' FizzBuzz');					
+			} else if (number % 3 == 0) {				
+					showMessage(' Fizz');
+			} else if (number % 5 == 0) {
+					showMessage(' Buzz');
+			} else {
+					showMessage(number);	  		
+			
+			}
+		}
+
+			
+			
+			
+			
+			
+			
+			
+			
+	</script>
+	
+</body>
+</html>
+
