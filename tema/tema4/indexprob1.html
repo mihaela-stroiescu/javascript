@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf-8">
+	<title>My website</title>
+</head>
+<body>
+	<body>  
+
+    <div id="container"></div>
+
+    <script type="text/javascript">
+	
+	
+
+        function showMessage(message){
+
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }	
+			
+			
+		var fraza = 'masina';
+		var nouaFraza = '';
+	
+		function returnCharCod(checkString, charPos) {				
+			var n = checkString.charCodeAt(charPos);
+			return n;
+		}
+	
+		function returnChar(charPos) {
+			var n = String.fromCharCode(charPos);
+			return n;
+		}
+		
+		var textLength = fraza.length;	
+		for (var i = 0; i < textLength; i++) {
+			var rezultat = returnCharCod(fraza, i);
+			rezultat++;
+			nouaFraza += returnChar(rezultat);
+			
+		}	
+	showMessage(nouaFraza);
+			
+	</script>
+	
+</body>
+</html>
+

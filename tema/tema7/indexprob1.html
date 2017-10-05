@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTf-8">
+	<title>My website</title>
+</head>
+<body>
+	<body>  
+
+    <div id="container"> 
+          
+    </div>
+
+    <script type="text/javascript">
+	
+	
+
+        function showMessage(message){
+
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }	
+			var fraza = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit! Pellentesque condimentum massa vitae Tempor rutrum. Etiam porttitor blandit nibh et porta... "Aenean suscipit ut diam vel dapibus?" Integer eu erat a lorem vehicula vestibulum!? Nunc ullamcorper arcu sit amet libero faucibus, id Consectetur velit tincidunt. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus; Mauris purus leo, interdum a suscipit et, ultrices sit amet felis.';
+			
+			var prepareFraza = fraza.replace(/  +/g, ' ').trim();
+	
+			var lungFraza = prepareFraza.length;
+			var countSpaces = 0;
+			var noUpperChar = 0;
+	
+			for (var i = 0; i < lungFraza; i++){
+				 if (prepareFraza[i] == ' ') {
+					countSpaces++;
+				 }
+
+				 if (prepareFraza[i] == ' ' || prepareFraza[i] == '"') {				 
+					if (prepareFraza[i + 1] !== prepareFraza[i + 1].toLowerCase()) {
+						noUpperChar++;
+					}
+				}
+			}
+			
+			if (prepareFraza[0] !== prepareFraza[0].toLowerCase()) {
+				noUpperChar++;
+			}			
+			countSpaces++;					
+			showMessage('Numarul de cuvinte este: ' +countSpaces);
+			
+			
+			var numarSentence = 0;
+			
+			prepareFraza = fraza.replace(/\.+/g, '.').replace(/\!\?/g, '!');
+			
+			for (var i = 0; i < lungFraza; i++) {
+				if (prepareFraza[i] == '.' || prepareFraza[i] == '!' || prepareFraza[i] == '?') {
+					numarSentence++;
+				}
+			
+			}
+			
+			showMessage('Numarul de propozitii este: ' +numarSentence);
+			
+			showMessage('Numarul de cuvinte cu litera mare este: ' +noUpperChar);
+			
+	</script>
+	
+</body>
+</html>
+
