@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+</head>
+
+<body>  
+
+    <div id="container"> 
+
+            
+
+    </div>
+
+    <script type="text/javascript">
+
+
+        function show(message)
+
+        {      
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }
+		var destinations = [];		
+		destinations.push('red');
+		console.log(destinations);
+		destinations.push('blue');
+		console.log(destinations);
+		destinations.push('yellow');
+		console.log(destinations);
+		destinations.push('green');
+		console.log(destinations);
+		destinations.push('cyan');
+		console.log(destinations);
+		console.table(destinations);
+		destinations.sort();
+		console.log(destinations);
+		var greenPosition = destinations.indexOf('green') + 1;
+		console.log(greenPosition);
+		
+		
+		var lastElement = destinations.slice(-2)[0];
+		console.log(lastElement);
+		
+		destinations.splice(4, 1);
+		console.log(destinations);
+		
+		phrase = destinations.join(' # ');
+		console.log(phrase);
+		
+		
+
+    </script>
+	
+
+</body>
+
+</html>
