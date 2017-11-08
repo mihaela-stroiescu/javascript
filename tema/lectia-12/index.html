@@ -28,7 +28,7 @@
 
         }
 		var destinations = [];		
-		destinations.push('red');
+		destinations.push('red');        
 		console.log(destinations);
 		destinations.push('blue');
 		console.log(destinations);
@@ -38,19 +38,32 @@
 		console.log(destinations);
 		destinations.push('cyan');
 		console.log(destinations);
+        
+        show('Array este format din: ' + destinations);
+        
 		console.table(destinations);
 		destinations.sort();
+        
 		console.log(destinations);
 		var greenPosition = destinations.indexOf('green') + 1;
 		console.log(greenPosition);
+        
+        show('Pozitia elementului green este: ' + greenPosition);
 		
 		
-		var lastElement = destinations.slice(-2)[0];
-		console.log(lastElement);
+		var lastEle = destinations.slice(-2)[0];
+		console.log(lastEle);
+        show('Penultimul element este: ' + lastEle);
 		
-		destinations.splice(4, 1);
-		console.log(destinations);
+        
+        //var lastE = destinations[destinations.length - 1];
+       // destinations.pop(lastE);
+		//show(lastE);
 		
+		var lastElement = destinations.pop();
+        console.log(destinations);
+        console.log('Ultimul element a fost: ' + lastElement);
+        
 		phrase = destinations.join(' # ');
 		console.log(phrase);
 		
