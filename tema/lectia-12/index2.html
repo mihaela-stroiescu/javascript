@@ -27,34 +27,43 @@
           document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
 
         }
-		
-       var args = [1, 4];
-        var argsLength = args.length;
-         convNrs = args.map(function(args) {
-            return parseInt(args);
-        });
-        
-       function prod(args)
-        {
-            var prod = 1;
-            
-
-            for (var i = 0; i < argsLength; i++) {
-                prod = parseInt(convNrs[i])*parseInt(convNrs[i]);
-            }
-
-        return prod;
+		function randomNumber() {
+            var randomValue = Math.random();
+            var randomIntNumber = Math.floor(randomValue * 10);
+            return randomIntNumber;
         }
-        var newAr = [];  
-        for (var i = 0; i < argsLength; i++) {
-                newAr = convNrs.map(prod);
-            }
-            
+
+        var numbers = [];
+
+        for (var i = 0; i < 3; i++) {
+            numbers.push(randomNumber());
+        }
+       function prod(args)
+		{
+			var prod = 1;
+
+			for (var i = 0; i < 3; i++) {
+				prod = Math.pow(parseInt(args[i]), 2);
+			}
+
+			return prod;
+		}
+
+		function sum2(args)
+		{
+			var sum = args.reduce(function(prod, next)
+			{
+				return sum + next;
+			});
+
+			return sum;
+		}
         
-        console.log(newAr);  
-        
-     
-		
+console.log(numbers);
+console.log('produs: ' + prod(numbers));
+console.log('Suma: ' + sum2(numbers));
+
+
        
     </script>
 	
