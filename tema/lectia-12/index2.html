@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+</head>
+
+<body>  
+
+    <div id="container"> 
+
+            
+
+    </div>
+
+    <script type="text/javascript">
+
+
+        function show(message)
+
+        {      
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }
+		
+       var args = [1, 4];
+        var argsLength = args.length;
+         convNrs = args.map(function(args) {
+            return parseInt(args);
+        });
+        
+       function prod(args)
+        {
+            var prod = 1;
+            
+
+            for (var i = 0; i < argsLength; i++) {
+                prod = parseInt(convNrs[i])*parseInt(convNrs[i]);
+            }
+
+        return prod;
+        }
+        var newAr = [];  
+        for (var i = 0; i < argsLength; i++) {
+                newAr = convNrs.map(prod);
+            }
+            
+        
+        console.log(newAr);  
+        
+     
+		
+       
+    </script>
+	
+
+</body>
+
+</html>

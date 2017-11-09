@@ -42,31 +42,25 @@
         show('Array este format din: ' + destinations);
         
 		console.table(destinations);
-		destinations.sort();
+		destinations.sort();        
+		show('Array aranjat este: ' + destinations);
         
-		console.log(destinations);
 		var greenPosition = destinations.indexOf('green') + 1;
 		console.log(greenPosition);
         
         show('Pozitia elementului green este: ' + greenPosition);
-		
-		
+				
 		var lastEle = destinations.slice(-2)[0];
 		console.log(lastEle);
         show('Penultimul element este: ' + lastEle);
-		
-        
-        //var lastE = destinations[destinations.length - 1];
-       // destinations.pop(lastE);
-		//show(lastE);
+		              
 		
 		var lastElement = destinations.pop();
-        console.log(destinations);
-        console.log('Ultimul element a fost: ' + lastElement);
+        show('Array fara ultimul element: ' + destinations);
+       
         
-		phrase = destinations.join(' # ');
-		console.log(phrase);
-		
+		phrase = destinations.join(' # ');		
+		show('String nou: ' + phrase);
 		
 
     </script>
