@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+</head>
+
+<body>  
+
+    <div id="container"> 
+
+            
+
+    </div>
+
+    <script type="text/javascript">
+
+
+        function show(message)
+
+        {      
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }
+		function randomNumber() {
+            var randomValue = Math.random();
+            var randomIntNumber = Math.floor(randomValue * 10);
+            return randomIntNumber;
+        }
+
+        var numbers = [];
+
+        for (var i = 0; i < 3; i++) {
+            numbers.push(randomNumber());
+        }
+       function prod(args)
+		{
+			var newAR = [];
+
+			for (var i = 0; i < 3; i++) {
+				newAR.push(Math.pow(parseInt(args[i]), 2));
+			}
+
+			return newAR;
+		}
+
+		function sum2(args)
+		{
+			var suma = args.reduce(function(sum, next)
+			{
+				return sum + next;
+			});
+
+			return suma;
+		}
+        
+        console.log(numbers);
+        var array2 = prod(numbers);
+        console.log('produs: ' + array2);
+        console.log('Suma: ' + sum2(array2));
+
+        // varianta 2
+        var sum = 0;
+        var numbersLength = numbers.length;
+        for (var i = 0; i < numbersLength; i++) {
+            sum = sum + parseInt(numbers[i]) ** 2;
+        }
+        console.log('Suma: ' + sum);
+
+       
+    </script>
+	
+
+</body>
+
+</html>
