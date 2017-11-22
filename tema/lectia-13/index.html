@@ -33,31 +33,31 @@
            // Array-ul numbers dupa modificare devine [16, 25, 12, 49]
                 
         
-		var numbers = [8, 2, 6, 4];	
+		var numbers = [8, 5, 6, 7];	
         
-        show('the array is: ' + numbers);
+        show('The initial array is: ' + numbers);
         
-          function isEven(numbers)
-        {
+        function isEven(numbers) {        
             if (numbers % 2 == 0) {
                 return true;
             }
-            return false;
-            // return number % 2 == 0;
-            // return !(number % 2);
+            return false;          
         }
         
         var newArray = [];
         var numbersLength = numbers.length;
+		var compute = 0;
         
-        newArray.push(numbers[0]);
-        for (var i = 1; i < numbersLength; i++) {
-            if (isEven(numbersLength[i])) {
-                newArray.push(numbersLength[i]**2);
-            }
-            newArray.push(numbers[i]);
+        for (var i = 0; i < numbersLength; i++) {
+            if (isEven(numbers[i])) {
+				compute = numbers[i]*2;								
+                newArray.push(compute);				
+            } else {
+				compute = numbers[i]*numbers[i];				
+				newArray.push(compute);
+			}            
         }
-       show(newArray);
+		show('The new array is: ' + newArray);
 
     </script>
 	

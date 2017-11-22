@@ -19,6 +19,10 @@
     </div>
 
     <script type="text/javascript">
+		//Declarati si initializati o variabila care sa contina un array format doar din string-uri. Scrieti un script care parcurge array-ul si inlocuieste fiecare element cu numarul de caractere al acelui element.
+
+		//var elements = ['red', 'green', 'orange', 'blue'];
+		// Array-ul elements dupa modificare devine [3, 5, 6, 4]
 
 
         function show(message)
@@ -27,50 +31,24 @@
           document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
 
         }
-		function randomNumber() {
-            var randomValue = Math.random();
-            var randomIntNumber = Math.floor(randomValue * 10);
-            return randomIntNumber;
-        }
-
-        var numbers = [];
-
-        for (var i = 0; i < 3; i++) {
-            numbers.push(randomNumber());
-        }
-       function prod(args)
-		{
-			var newAR = [];
-
-			for (var i = 0; i < 3; i++) {
-				newAR.push(Math.pow(parseInt(args[i]), 2));
-			}
-
-			return newAR;
+		
+		var elements = ['red', 'green', 'orange', 'blue'];
+		
+		var newArray = [];
+		var elemLength = elements.length;
+		var count = 0;
+		
+		for (var i = 0; i < elemLength; i++) {
+			count = elements[i].length;
+			
+			newArray.push(count);
+			console.log(count);
 		}
+		
+		show('Initial array is: ' + elements);
+		show('Final array is: ' + newArray);
+		
 
-		function sum2(args)
-		{
-			var suma = args.reduce(function(sum, next)
-			{
-				return sum + next;
-			});
-
-			return suma;
-		}
-        
-        console.log(numbers);
-        var array2 = prod(numbers);
-        console.log('produs: ' + array2);
-        console.log('Suma: ' + sum2(array2));
-
-        // varianta 2
-        var sum = 0;
-        var numbersLength = numbers.length;
-        for (var i = 0; i < numbersLength; i++) {
-            sum = sum + parseInt(numbers[i]) ** 2;
-        }
-        console.log('Suma: ' + sum);
 
        
     </script>
