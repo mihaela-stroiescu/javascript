@@ -36,25 +36,36 @@
 			//parcurgeti array-ul si verificati daca elementul curent este la fel cu elementul urmator
 			//stergeti elementul urmator si decrementati cu o unitate variabila in care ati pus la inceput lungimea array-ului pentru a scurta numarul de //iteratii facute de for-ul care parcurge array-ul
 			
-		var elem = [1, 3, 4, 1, 3, 5, 4];
-		var convNrs = [];
-		var elemLength = elem.length;
-		var sortedElements = elem.sort();
-		console.log(sortedElements);
-		var count = 0;
 		
-        for (var i = 0; i < elemLength; i++) {
+		
+		//var elem = ['Red', 'blue', 'orange', 'red', 'Blue', 'Orange'];
+		var elem = [1, 4, 3, 1, 4, 3];
+		var elemLength = elem.length;
+		var convNrs = [];
+		var elemString = [];
+		
+		for (var i = 0; i < elemLength; i++) {	
+		
+			if (isNaN(elem[i])) {			
+				elemString[i] = elem[i].toLowerCase();
+			} else {
+				elemString[i] = elem[i];
+			}	
+			
+        }
+		
+		sortedElements = elemString.sort();
+        		
+		for (var i = 0; i < elemLength; i++) {
+		
 			if (sortedElements[i] != sortedElements[i+1]){
-				convNrs.push(sortedElements[i]);
-				
-				
-			};
+				convNrs.push(sortedElements[i]);								
+			};		
 			
 		}
-        show('Initial array is: ' + elem);
+		
+		show('Initial array is: ' + elem);
         show('Final array is: ' + convNrs);
-        
-        
     </script>
 	
 
