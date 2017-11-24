@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+</head>
+
+<body>  
+
+    <div id="container"> 
+
+            
+
+    </div>
+
+    <script type="text/javascript">
+
+
+        function show(message)
+
+        {      
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }
+		
+		//Scrieti un script care sa stearga toate dublurile dintr-un array. In cazul elementelor de tip string compararea se va face case insensitive.
+		//Tips:
+
+			//parcurgeti array-ul si convertiti in lower case toate cuvintele
+			//sortati array-ul crescator
+			//parcurgeti array-ul si verificati daca elementul curent este la fel cu elementul urmator
+			//stergeti elementul urmator si decrementati cu o unitate variabila in care ati pus la inceput lungimea array-ului pentru a scurta numarul de //iteratii facute de for-ul care parcurge array-ul
+			
+		
+		
+		//var elem = ['Red', 'blue', 'orange', 'red', 'Blue', 'Orange'];
+		var elem = [1, 4, 3, 1, 4, 3];
+		var elemLength = elem.length;
+		var convNrs = [];
+		var elemString = [];
+		
+		for (var i = 0; i < elemLength; i++) {	
+		
+			if (isNaN(elem[i])) {			
+				elemString[i] = elem[i].toLowerCase();
+			} else {
+				elemString[i] = elem[i];
+			}	
+			
+        }
+		
+		sortedElements = elemString.sort();
+        		
+		for (var i = 0; i < elemLength; i++) {
+		
+			if (sortedElements[i] == sortedElements[i+1]) {            
+                sortedElements.splice(i+1, 1);	
+                elemLength--;               
+			} 
+	
+		}
+		
+		show('Initial array is: ' + elem);
+        show('Final array is: ' + sortedElements);
+    </script>
+	
+
+</body>
+
+</html>
