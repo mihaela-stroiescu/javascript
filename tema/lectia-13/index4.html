@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+</head>
+
+<body>  
+
+    <div id="container"> 
+
+            
+
+    </div>
+
+    <script type="text/javascript">
+
+
+        function show(message)
+
+        {      
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }
+        //Scrieti un script care sa converteasca un string in camelcase.
+        //'JavaScript Exercises' ---> 'JavaScriptExercises'
+        //'JavaScript exercises' ---> 'JavaScriptExercises'
+        //'JavaScriptExercises' ---> 'JavaScriptExercises'
+                
+        var phrase = ["JavaScript Exercises"];
+            phrase.toString();
+            console.log(phrase);
+        var PhraseLenght = phrase.lenght;
+        
+            for (var i = 0; i < PhraseLenght; i++) {
+                if ( phrase[i] = ' ' ) {
+                        phrase.replace(/\s/g, '');
+                } 
+            }
+        
+        
+        console.log(phrase);
+    </script>
+	
+
+</body>
+
+</html>
