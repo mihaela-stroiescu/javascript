@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+</head>
+
+<body>  
+
+    <div id="container"> 
+
+            
+
+    </div>
+
+    <script type="text/javascript">
+
+
+        function show(message)
+
+        {      
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }
+        // Scrieti un script care sa converteasca un string, continand prenume si nume, la forma abreviata.
+          //  'Alexandra Anton' ---> 'Alex A.'
+
+          
+                
+        
+		var fraza = 'Alex Anton';		
+		var spacePosition = fraza.indexOf(' ');
+		var abbrevName = fraza.substring(0, spacePosition + 2);
+		
+		
+			show(abbrevName + '.');
+		
+		
+		
+		
+
+    </script>
+	
+
+</body>
+
+</html>

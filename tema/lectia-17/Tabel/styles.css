@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
+@import url('https://fonts.googleapis.com/css?family=Mukta+Malar:200');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    background: #D2C9C9;
+    margin: 50px 100px;
+}
+
+.container {
+    display: grid;
+    width: 80%;    
+    grid-template-columns: repeat(10, 1fr);
+    height: 500px;
+    border: 3px solid #242428;
+    
+}
+
+.container .item {
+    background: #D9D2D7;
+    border: 1px solid #545350;
+    font-family: 'Roboto Mono';
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 20px;
+}
+
+.container .item.large {
+    grid-column: span 2;
+    background: #92858D;
+
+}
+
+

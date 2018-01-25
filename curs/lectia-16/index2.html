@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+</head>
+
+<body>  
+
+    <div id="container"> 
+
+            
+
+    </div>
+
+    <script type="text/javascript">
+		//Declarati si initializati o variabila care sa contina un array format doar din string-uri. Scrieti un script care parcurge array-ul si inlocuieste fiecare element cu numarul de caractere al acelui element.
+
+		//var elements = ['red', 'green', 'orange', 'blue'];
+		// Array-ul elements dupa modificare devine [3, 5, 6, 4]
+
+
+        function show(message)
+
+        {      
+          document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+
+        }
+		
+		var elements = ['red', 'green', 'orange', 'blue'];
+		
+		var newArray = [];
+		var elemLength = elements.length;
+		var count = 0;
+		
+		for (var i = 0; i < elemLength; i++) {
+			count = elements[i].length;
+			
+			newArray.push(count);
+			console.log(count);
+		}
+		
+		show('Initial array is: ' + elements);
+		show('Final array is: ' + newArray);
+		
+
+
+       
+    </script>
+	
+
+</body>
+
+</html>
