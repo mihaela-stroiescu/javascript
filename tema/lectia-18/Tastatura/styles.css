@@ -11,19 +11,19 @@
 
 h1 {
     font-family: 'Ubuntu';
-    color: #F0F0F0;
+    color: rgb(240, 240, 240);
 }
 
 .calculator {
-    width: 240px;
-    height: 420px;    
+    width: 640px;
+    height: 152px;    
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px 5px;
 }
 
 .calculator .display {
     height: 120px;
     padding-top: 4px;
-    background: #202020;
+    background: #d85858;
 }
 
 .calculator .display .queue {
@@ -36,19 +36,6 @@ h1 {
     color: #CCC;
     padding: 4px;
     overflow-y: scroll;
-}
-.scroll::-webkit-scrollbar {
-    width: 5px;
-}
-
-.scroll::-webkit-scrollbar-track {
-    background: #333;
-    border-radius: 5px;
-}
-
-.scroll::-webkit-scrollbar-thumb {
-    background: #F88C2A;
-    border-radius: 5px;
 }
 
 .calculator .display .input {
@@ -65,14 +52,14 @@ h1 {
 
 .calculator .buttons {
     display: grid;    
-    grid-template-columns: repeat(4, 1fr);
-    height: 300px;
+    grid-template-columns: repeat(10, 1fr);
+    height: 30px;
 }
 
 .calculator .buttons .button {
-    background: #D2D3D5;
-    border-right: 1px solid #979799;
-    border-bottom: 1px solid #979799;
+    background: rgb(218, 182, 24);
+    border-right: 1px solid #06063a;
+    border-bottom: 1px solid #960f53;
     font-family: 'Roboto Mono';
     font-size: 28px;
     cursor: pointer;
