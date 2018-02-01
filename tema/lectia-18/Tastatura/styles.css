@@ -16,7 +16,7 @@ h1 {
 
 .calculator {
     width: 640px;
-    height: 152px;    
+    height: 302px;    
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 15px 5px;
 }
 
@@ -51,7 +51,8 @@ h1 {
 }
 
 .calculator .buttons {
-    display: grid;    
+    display: grid;  
+    grid-gap: 10px;  
     grid-template-columns: repeat(10, 1fr);
     height: 30px;
 }
@@ -65,8 +66,7 @@ h1 {
     cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: center;
-
+    justify-content: center;   
 }
 
 .calculator .buttons .button.large {
