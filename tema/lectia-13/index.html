@@ -27,37 +27,24 @@
           document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
 
         }
-        //Scrieti un script care parcurge un array format doar din numere intregi pozitive si care inlocuieste fiecare element par cu dublul lui si fiecare element impar cu patratul lui.
-
-
-           // Array-ul numbers dupa modificare devine [16, 25, 12, 49]
+        /*
+            Scrieti un script care sa transforme un string dupa modelul urmator:
+            'Robin Singh from USA.' ---> 'robin-singh-from-usa'
+            Din cerinta problemei observam ca avem nevoie de urmatoarele:
+                - o variabila de tip string in care sa punem textul
+                - o functie care sa scoata punctele / semnele de punctuatie
+                - o functie care sa inlocuiasca spatiile cu '-'
+                - o functie care le combina pe cele doua de mai sus si care converteste textul la litere mici
+            Pentru o mai buna organizare a codului vom grupa la inceputul scriptului toate functiile.
+        */
                 
+        var text = 'Robin Singh from USA.';
+        var textLength = text.length;
+        textN = text.substring(0, textLength - 1);
+        var spacePos = textN.lastIndexOf(' '); 
+        show(textN);
         
-		var numbers = [8, 5, 6, 7];	
         
-        show('The initial array is: ' + numbers);
-        
-        function isEven(numbers) {        
-            if (numbers % 2 == 0) {
-                return true;
-            }
-            return false;          
-        }
-        
-        var newArray = [];
-        var numbersLength = numbers.length;
-		var compute = 0;
-        
-        for (var i = 0; i < numbersLength; i++) {
-            if (isEven(numbers[i])) {
-				compute = numbers[i]*2;								
-                newArray.push(compute);				
-            } else {
-				compute = numbers[i]*numbers[i];				
-				newArray.push(compute);
-			}            
-        }
-		show('The new array is: ' + newArray);
 
     </script>
 	
