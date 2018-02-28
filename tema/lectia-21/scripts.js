@@ -1,10 +1,13 @@
 $(() => {
     setToggleEvent();
+    expandAll();
+    collapseAll();
 });
 
+
+
 const setToggleEvent = () => {
-    $('.expand').click(expandAll);
-    $('.collapse').click(collapseAll);
+    
     $('.title').click(toggleDescription);
 };
 
@@ -36,21 +39,28 @@ const toggleElement = element => {
     element.toggleClass('fa-chevron-down fa-chevron-up');
 };
 
+//function expandAll() {
+    
+ //  $('.expand').click(function() {
+ //      if (!$('.description').hasClass('opened')) {
+ //       $('.description').toggle(); 
+ //       $('.description').addClass('opened');       
+ //      }
+ //  });
+//};
+
 function expandAll() {
-    const descriptions = $('.description');
-    $.each(descriptions, function (index, element) {
-        descriptions.addClass('opened');
-        return;
-    });
-
-        if (descriptions.hasClass('opened')) {
-            descriptions.removeClass('opened');
-            descriptions.toggle(1000);
-            return;
-        };
-
+   
+    $('.description').not('opened').css('opened');
+    
 };
 
+
 function collapseAll() {
-    $(expandAll).removeClass('opened');
+    $('.collapse').click(function() {
+         $('.description').toggle(); 
+        $('.description').removeClass('opened'); 
+    });
+    
+    
 };
