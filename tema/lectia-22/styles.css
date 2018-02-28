@@ -24,8 +24,8 @@ h1 {
     height: 420px;
     margin: 50px auto;
     display: grid;
-    grid-template-columns: auto 120px;
-    grid-template-rows: 120px 1fr 1fr 1fr;
+    grid-template-columns: 520px 1fr;
+    border: 2px solid rgb(37, 109, 37);
     background: #afb7c3;
     overflow: hidden;
 }
@@ -37,24 +37,30 @@ h1 {
     box-shadow: 0px 0px 10px #00000044;
     -moz-box-shadow: 0px 0px 10px #00000044;
     -webkit-box-shadow: 0px 0px 10px #00000044;
-
 }
-.i {
-    align-content: center;
-    justify-content: center;
+
+.far {
+    font-size: 35px;
     cursor: pointer;
     box-shadow: 0px 0px 10px #999;
     -moz-box-shadow: 0px 0px 10px #999;
     -webkit-box-shadow: 0px 0px 10px #999;
 }
-.button {
+
+.buttons {
     display: grid;
-    grid-template-rows: 25% 100px auto;
-    padding: 20px;
+    grid-template-rows: auto auto auto;
+    grid-gap: 8px;
+    padding: 8px;
     box-shadow: 0px 0px 10px #999;
     -moz-box-shadow: 0px 0px 10px #999;
     -webkit-box-shadow: 0px 0px 10px #999;
 }
 
-
-
+.button {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 30px;
+    border: 1px solid #094e0c;
+    background-color: rgb(152, 224, 134);
+}
