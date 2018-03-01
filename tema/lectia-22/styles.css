@@ -20,47 +20,42 @@ h1 {
 }
 
 .container {
-    width: 620px;
-    height: 420px;
+    width: 500px;
+    height: 300px;
     margin: 50px auto;
     display: grid;
-    grid-template-columns: 520px 1fr;
-    border: 2px solid rgb(37, 109, 37);
+    grid-template-columns: 2fr 1fr;
     background: #afb7c3;
+    border: 2px solid black;
     overflow: hidden;
 }
 
 .display {
-    background: #c4c4c4;
-    padding: 20px;
+    background: #eee9e9;
     overflow: hidden;
-    box-shadow: 0px 0px 10px #00000044;
-    -moz-box-shadow: 0px 0px 10px #00000044;
-    -webkit-box-shadow: 0px 0px 10px #00000044;
 }
 
-.far {
+.fas {
     font-size: 35px;
+    background: white;
     cursor: pointer;
-    box-shadow: 0px 0px 10px #999;
+
     -moz-box-shadow: 0px 0px 10px #999;
     -webkit-box-shadow: 0px 0px 10px #999;
 }
 
 .buttons {
     display: grid;
-    grid-template-rows: auto auto auto;
-    grid-gap: 8px;
-    padding: 8px;
-    box-shadow: 0px 0px 10px #999;
+    grid-template-rows: repeat(3, 1fr)r;
+    grid-gap: 3px;
     -moz-box-shadow: 0px 0px 10px #999;
     -webkit-box-shadow: 0px 0px 10px #999;
 }
 
 .button {
-    font-size: 18px;
+    font-size: 19px;
     text-align: center;
-    padding-top: 30px;
+    padding-top: 40px;
     border: 1px solid #094e0c;
     background-color: rgb(152, 224, 134);
 }
