@@ -37,7 +37,7 @@ h1 {
 
 .fas {
     font-size: 35px;
-    background: white;
+    color: white;
     cursor: pointer;
     position: absolute;
     -moz-box-shadow: 0px 0px 10px #999;
