@@ -24,12 +24,13 @@ h2 {
     font-size: 3vw;
     color: #999;
 }
+
 .container {
     width: 95%;
     margin: 50px auto;
     display: grid;
     grid-template-columns: 2fr 8fr 2fr;
-    background: rgb(175, 183, 195);
+    background: #afb7c3;
     overflow: hidden;
 }
 
@@ -60,7 +61,7 @@ h2 {
     box-shadow: 0px 0px 10px #00000044;
     -moz-box-shadow: 0px 0px 10px #00000044;
     -webkit-box-shadow: 0px 0px 10px #00000044;
-    background: rgb(196, 196, 196);
+    background: #c4c4c4;
 }
 
 .board {
@@ -91,18 +92,22 @@ h2 {
         #55da5c 3vw
     );
 }
+
 .board .cards i {
     display: none;
 }
+
 .board .cards.on {
     background: #bada5588;
 }
+
 .board .cards.on i {
+    font-size: calc(30vw / var(--cols-number));
     color: #ffffff88;
     text-shadow: 4px 4px 4px #00000044;
-    font-size: calc(35vw / var(--width));
     display: block;
 }
+
 .board .cards.removed {
     visibility: hidden;
 }
