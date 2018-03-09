@@ -1,35 +1,15 @@
 $(() => {
-    GetValue();
+    GetNumbers();
 });
 
-const GetValue = () => {
-   const valor = $('#add').val();
-    GetValue(valor);
-};
-console.log(GetValue);
-//$(() => {
-//    setRandomEvent();
-//});
+function ReadInput() {
+    var textInput = $('.input').val();
+    return textInput;
+}
 
-//const setRandomEvent = () => {
-//    $('.buton').click();
-//};
-
-//$(() => {
-//    $('#add').keyup(function () {
-//        takeValue($('#add').val());
-//    });
-
-//});
-
-//$(() => {
-//    setRandomEvent();
-//});
-
-
-
-
-
-
-
-
+function GetNumbers() {
+    $('.button').click(function() {
+        ReadInput();
+        console.log(ReadInput());
+    });
+}
